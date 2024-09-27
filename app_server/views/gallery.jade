@@ -1,4 +1,21 @@
 extends layout
 
 block content
-    h1 Gallery
+  h1 Image Gallery
+  div.container
+    if images.length > 0
+      each image, index in images
+        div.mySlides.fade
+          img(src="/images/dance1.jpg", style="width:100%")
+    else
+      p No images available
+
+  br
+  div.dots
+    if images.length > 0
+      each image, index in images
+        span.dot(onclick=`currentSlide(${index+1})`)
+        
+block scripts
+  script(src="/javascripts/gallery.js")
+

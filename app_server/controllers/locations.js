@@ -1,79 +1,60 @@
+const fs = require('fs');
+const path = require('path');
+
+// Controller for the classes page
 const classes = (req, res) => {
-    const timings = [
-      {
-        day: "Saturday",
-        batch1: {
-            opening: "4:30pm",
-            closing: "5:30pm"
-        },
-        batch2: {
-            opening: "5:30pm",
-            closing: "7:00pm"
-        }
-      },
-      {
-        day: "Sunday",
-        batch1: {
-            opening: "10:30pm",
-            closing: "11:30pm"
-        },
-        batch2: {
-            opening: "11:30pm",
-            closing: "1:00pm"
-        }
-      },
-      {
-        day: "Monday",
-        batch1: {
-            opening: "4:30pm",
-            closing: "5:30pm"
-        },
-        batch2: {
-            opening: "5:30pm",
-            closing: "7:00pm"
-        }
-      },
-      {
-        day: "Tuesday",
-        batch1: {
-            opening: "4:30pm",
-            closing: "5:30pm"
-        },
-        batch2: {
-            opening: "5:30pm",
-            closing: "7:00pm"
-        }
-      },
-    ];
-  
-    res.render("classes", { title: "Our Classes", timings, page: "classes" });
-  };
-  
-  const home = (req, res) => {
-    res.render("home", { title: "Restaurant Home", page: "home" });
-  };
-  
-  const about = (req, res) => {
-    res.render("about", { title: "About", page: "about" });
-  };
-  
-  const contact = (req, res) => {
-    res.render("contact", { title: "Contact", page: "contact" });
-  };
+  res.render("classes", { title: "Our Classes", page: "classes" });
+};
 
-  const gallery = (req, res) => {
-    res.render("gallery", { title: "Gallery", page: "gallery" });
-  };
-  
-  const signup = (req, res) => {
-    res.render("signup", { title: "Signup", page: "signup" });
-  };
+// Controller for the home page
+const home = (req, res) => {
+  res.render("home", { title: "Restaurant Home", page: "home" });
+};
 
-  module.exports = {
-    about,
-    home,
-    classes,
-    gallery,
-    contact,
-    signup,
-  };
+// Controller for the about page
+const about = (req, res) => {
+  res.render("about", { title: "About", page: "about" });
+};
+
+// Controller for the contact page
+const contact = (req, res) => {
+  res.render("contact", { title: "Contact", page: "contact" });
+};
+
+// Updated gallery controller
+const gallery = (req, res) => {
+  const imageDir = path.join(__dirname, '../../public/images');
+  
+  fs.readdir(imageDir, (err, files) => {
+    if (err) {
+      console.error('Error reading image directory', err);
+      return res.status(500).send('Error reading image directory');
+    }
+    
+    // Filter the files to get only image formats
+    const images = files.filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file));
+    
+    // Render the gallery view and pass the image array to it
+    res.render("gallery", { title: "Gallery", page: "gallery", images });
+  });
+};
+
+// Controller for the signup page
+const signup = (req, res) => {
+  res.render("signup", { title: "Signup", page: "signup" });
+};
+
+const query = (req, res) => {
+  res.render("query", { title: "Query", page: "query" });
+};
+
+// Export the controllers
+module.exports = {
+  about,
+  home,
+  classes,
+  gallery,
+  contact,
+  signup,
+  query,
+};

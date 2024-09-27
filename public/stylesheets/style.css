@@ -68,7 +68,7 @@ ul.nav li a:hover {
 }
 
 /* Donate button styling */
-button.donate {
+.donate {
     background-color: brown; /* Red button color */
     color: white;
     padding: 10px 20px;
@@ -79,9 +79,11 @@ button.donate {
     border-radius: 50px;
     position: relative;
     margin-top: 10px;
+    max-width: 750px;
+    
 }
 
-button.donate:hover {
+.donate:hover {
     background-color: #d4004c; /* Slightly darker red on hover */
 }
 

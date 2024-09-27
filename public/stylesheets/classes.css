@@ -6,15 +6,15 @@
 .class-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
 .class {
     background-color: #f9f9f900;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     width: 45%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   }
   
 .class h2 {
@@ -35,5 +35,24 @@
   
 .class ul li {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
+
+  .donate1 {
+    background-color: brown; /* Red button color */
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 5px;
+    max-width: 750px;
+    
+}
+
+.donate1:hover {
+    background-color: #d4004c; /* Slightly darker red on hover */
+}

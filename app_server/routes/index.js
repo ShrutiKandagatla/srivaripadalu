@@ -10,6 +10,8 @@ router.get("/contact", ctrlLocations.contact);
 router.get("/about", ctrlLocations.about);
 router.get("/gallery", ctrlLocations.gallery);
 router.get("/signup", ctrlLocations.signup);
+router.get("/query", ctrlLocations.query);
 
 router.get("/", ctrlMain.index);
+
 module.exports = router;
