@@ -1,0 +1,18 @@
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slider img');
+    const totalSlides = slides.length;
+  
+    function showNextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides; // Increment slide index
+      const offset = currentSlide * slides[0].clientWidth; // Get the width of one slide
+      document.querySelector('.slider').scrollTo({
+        left: offset, // Scroll to the calculated offset
+        behavior: 'smooth'
+      });
+    }
+  
+    // Auto-slide every 5 seconds
+    setInterval(showNextSlide, 5000);
+  </script>
+  

@@ -1,1 +1,23 @@
-extends layout 
+extends layout
+
+block content
+    main 
+        section#query
+            .container
+                h1 Submit Your Query
+                .form-wrapper
+                    form(action="/add-query", method="post")
+                        .input-group
+                        label(for="name") Name:
+                        input#name(type="text", name="name", placeholder="Enter your name", required)
+                        .input-group
+                        label(for="email") Email:
+                        input#email(type="email", name="email", placeholder="Enter your email", required)
+                        .input-group
+                        label(for="message") Message:
+                        textarea#message(name="message", rows="5", placeholder="Enter your query", required)
+                        .input-group
+                        a.button(href='/submit') Submit Query
+
+
+

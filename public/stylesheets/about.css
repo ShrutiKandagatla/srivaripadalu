@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh; /* Full screen height */
+    height: 70vh;
     text-align: center;
     color: #fff;
     padding: 10px;
@@ -19,7 +19,7 @@
     font-size: 24px;
     margin-bottom: 10px;
     color: #fff; 
-    max-width: 95%; /* Ensure the text is visible on the dark background */
+    max-width: 95%; 
   }
   
   .about-box p {

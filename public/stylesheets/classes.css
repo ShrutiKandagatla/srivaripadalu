@@ -39,7 +39,7 @@
   }
 
   .donate1 {
-    background-color: brown; /* Red button color */
+    background-color: brown; 
     color: white;
     padding: 10px 10px;
     border: none;
@@ -54,5 +54,5 @@
 }
 
 .donate1:hover {
-    background-color: #d4004c; /* Slightly darker red on hover */
+    background-color: #d4004c; 
 }
