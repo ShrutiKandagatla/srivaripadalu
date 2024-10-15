@@ -1,8 +1,8 @@
 const about = (req, res) => {
     res.render("about", { title: "About" });
   };
-  const gallery = (req, res) => {
-    res.render("gallery", { title: "Gallery" });
+  const event = (req, res) => {
+    res.render("event", { title: "Events" });
   };
   const classes = (req, res) => {
     res.render("classes", { title: "Classes" });
@@ -18,11 +18,21 @@ const about = (req, res) => {
     res.render("submit", { title: "Submit" });
   };
 
+  const pastevents = (req, res) => {
+    res.render("pastevents", { title: "Past events"});
+  };
+  
+  const futureevents = (req, res) => {
+    res.render("futureevents", { title: "Future events"});
+  };
+  
   module.exports = {
     about,
-    gallery,
+    event,
     classes,
     contact,
     query,
     submit,
+    pastevents,
+    futureevents,
   };

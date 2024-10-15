@@ -1,0 +1,182 @@
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#events {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.event-box {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  height: 250px;
+}
+
+.event-box1 {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  height: 250px;
+  max-width: 25%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#event-f2 {
+  background-image: url('/images/dance2.jpg'); /* Add correct path to image */
+}
+
+#event-f1 {
+  background-image: url('/images/dance3.jpg'); /* Add correct path to image */
+}
+
+#event-f3 {
+  background-image: url('/images/dance4.jpg'); /* Add correct path to image */
+}
+
+#event-p3 {
+  background-image: url('/images/dance5.jpg'); /* Add correct path to image */
+}
+
+#event-p2 {
+  background-image: url('/images/dance6.jpg'); /* Add correct path to image */
+}
+
+#event-p1 {
+  background-image: url('/images/dance10.jpg'); /* Add correct path to image */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#events {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.event-box {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: brown;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.button2:hover {
+  background-color: #d4004c;
+}
+
+.button3 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: brown;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 200px;
+}
+
+.button3:hover {
+  background-color: #d4004c;
+}
+
+
+.gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-item {
+  margin: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.event-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-image {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 250px;
+}
